@@ -1,78 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Smart Lender - Loan Prediction</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Lender | Loan Prediction</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<div class="container">
+<div class="predict-container">
 
     <h1>Smart Lender</h1>
     <h2>Loan Eligibility Prediction</h2>
 
-    <form action="/predict" method="POST">
+    <form action="/predict_result" method="POST" class="predict-form">
 
-        <label>Gender</label>
-        <select name="Gender">
-            <option>Male</option>
-            <option>Female</option>
-        </select>
+        <div class="form-group">
+            <label>Gender</label>
+            <select name="Gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </div>
 
-        <label>Married</label>
-        <select name="Married">
-            <option>Yes</option>
-            <option>No</option>
-        </select>
+        <div class="form-group">
+            <label>Married</label>
+            <select name="Married">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+        </div>
 
-        <label>Dependents</label>
-        <select name="Dependents">
-            <option>0</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3+</option>
-        </select>
+        <div class="form-group">
+            <label>Dependents</label>
+            <select name="Dependents">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3+</option>
+            </select>
+        </div>
 
-        <label>Education</label>
-        <select name="Education">
-            <option>Graduate</option>
-            <option>Not Graduate</option>
-        </select>
+        <div class="form-group">
+            <label>Education</label>
+            <select name="Education">
+                <option>Graduate</option>
+                <option>Not Graduate</option>
+            </select>
+        </div>
 
-        <label>Self Employed</label>
-        <select name="Self_Employed">
-            <option>Yes</option>
-            <option>No</option>
-        </select>
+        <div class="form-group">
+            <label>Self Employed</label>
+            <select name="Self_Employed">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+        </div>
 
-        <label>Applicant Income</label>
-        <input type="number" name="ApplicantIncome" required>
+        <div class="form-group">
+            <label>Credit History</label>
+            <select name="Credit_History">
+                <option value="1">1</option>
+                <option value="0">0</option>
+            </select>
+        </div>
 
-        <label>Coapplicant Income</label>
-        <input type="number" name="CoapplicantIncome" required>
+        <div class="form-group">
+            <label>Property Area</label>
+            <select name="Property_Area">
+                <option>Urban</option>
+                <option>Semiurban</option>
+                <option>Rural</option>
+            </select>
+        </div>
 
-        <label>Loan Amount</label>
-        <input type="number" name="LoanAmount" required>
+        <div class="form-group">
+            <label>Loan Amount Term</label>
+            <input type="number" name="Loan_Amount_Term" required>
+        </div>
 
-        <label>Loan Amount Term</label>
-        <input type="number" name="Loan_Amount_Term" required>
+        <div class="form-group">
+            <label>Applicant Income</label>
+            <input type="number" name="ApplicantIncome" required>
+        </div>
 
-        <label>Credit History</label>
-        <select name="Credit_History">
-            <option value="1">1</option>
-            <option value="0">0</option>
-        </select>
+        <div class="form-group">
+            <label>Coapplicant Income</label>
+            <input type="number" name="CoapplicantIncome" required>
+        </div>
 
-        <label>Property Area</label>
-        <select name="Property_Area">
-            <option>Urban</option>
-            <option>Semiurban</option>
-            <option>Rural</option>
-        </select>
+        <div class="form-group full-width">
+            <label>Loan Amount</label>
+            <input type="number" name="LoanAmount" required>
+        </div>
 
-        <br><br>
-
-        <button type="submit">Predict Loan Status</button>
+        <div class="full-width">
+            <button type="submit" class="predict-btn">
+                Predict Loan Status
+            </button>
+        </div>
 
     </form>
 
