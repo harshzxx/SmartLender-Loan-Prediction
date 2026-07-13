@@ -12,10 +12,16 @@ with open("loan_model.pkl", "rb") as file:
 # Home Page
 @app.route("/")
 def home():
+    return render_template("home.html")
+
+# Prediction Form Page
+@app.route("/predict")
+def predict_page():
     return render_template("index.html")
 
-# Prediction
-@app.route("/predict", methods=["POST"])
+
+# Prediction Result
+@app.route("/predict_result", methods=["POST"])
 def predict():
 
     gender = request.form["Gender"]
