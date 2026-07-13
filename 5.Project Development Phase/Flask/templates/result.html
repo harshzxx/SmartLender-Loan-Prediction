@@ -1,27 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Prediction Result</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Lender | Home</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
-<div class="container">
-
-    <h1>Smart Lender</h1>
-    <h2>Loan Eligibility Prediction Result</h2>
-
-    <div class="result">
-        <h3>{{ prediction }}</h3>
+<nav>
+    <div class="logo">
+        <i class="fa-solid fa-building-columns"></i>
+        Smart Lender
     </div>
 
-    <br>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="/predict">Predict</a></li>
+    </ul>
+</nav>
 
-    <a href="/">
-        <button>Predict Another Loan</button>
-    </a>
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>Loan Eligibility Prediction Using Machine Learning</h1>
+
+        <p>
+            Smart Lender helps users quickly determine loan eligibility
+            using a Machine Learning model. The system provides
+            fast, secure and reliable predictions based on applicant details.
+        </p>
+
+        <div class="features">
+
+            <span><i class="fa-solid fa-check"></i> Fast Prediction</span>
+
+            <span><i class="fa-solid fa-shield-halved"></i> Secure</span>
+
+            <span><i class="fa-solid fa-brain"></i> AI Powered</span>
+
+        </div>
+
+        <a href="/predict" class="btn">
+            Start Loan Assessment
+        </a>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="{{ url_for('static', filename='images/loan-illustration.png') }}" alt="Loan Illustration">
+
+    </div>
+
+</section>
+
+<section class="about" id="about">
+
+<h2>Why Choose Smart Lender?</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>Fast Processing</h3>
+
+<p>
+Instant loan eligibility prediction within seconds.
+</p>
 
 </div>
+
+<div class="card">
+
+<i class="fa-solid fa-lock"></i>
+
+<h3>Secure System</h3>
+
+<p>
+Applicant information is processed securely.
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>Reliable Prediction</h3>
+
+<p>
+Predictions are generated using a Random Forest model.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="workflow">
+
+<h2>How It Works</h2>
+
+<div class="steps">
+
+<div>
+
+<h3>1</h3>
+
+<p>Enter Applicant Details</p>
+
+</div>
+
+<div class="arrow">
+➜
+</div>
+
+<div>
+
+<h3>2</h3>
+
+<p>ML Model Analysis</p>
+
+</div>
+
+<div class="arrow">
+➜
+</div>
+
+<div>
+
+<h3>3</h3>
+
+<p>Get Prediction Result</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Smart Lender | Built using Flask, Python & Machine Learning
+
+</p>
+
+</footer>
 
 </body>
 </html>
