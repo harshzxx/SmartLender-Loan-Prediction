@@ -1,60 +1,70 @@
-# 🏦 Smart Lender – Machine Learning Based Loan Eligibility Prediction
+# 🏦 Smart Lender – Loan Eligibility Prediction Using Machine Learning
 
-Smart Lender is a Machine Learning-based web application that predicts whether a loan applicant is eligible for loan approval based on personal and financial information. The application uses a trained **Random Forest** model integrated with a **Flask** web application to provide instant loan eligibility predictions through a simple and interactive interface.
+A Machine Learning-powered web application that predicts whether a loan applicant is eligible for loan approval based on demographic and financial details. The application uses a trained **Random Forest Classifier** integrated with a **Flask** web application to provide fast and reliable loan eligibility predictions through a clean and user-friendly interface.
 
 ---
 
-# 📌 Project Overview
+# 📖 Project Overview
 
-Financial institutions receive numerous loan applications every day, making manual verification time-consuming and prone to inconsistencies. Smart Lender addresses this challenge by analyzing applicant information and predicting loan eligibility using machine learning techniques.
+Financial institutions process thousands of loan applications every year. Manual verification is often time-consuming and may lead to inconsistent decisions. Smart Lender automates the preliminary loan screening process using Machine Learning, helping users instantly determine the likelihood of loan approval.
 
-The project covers the complete machine learning workflow, including data preprocessing, exploratory data analysis, model training, model evaluation, and deployment using Flask.
+The project demonstrates the complete Machine Learning lifecycle, including:
+
+- Data Collection
+- Data Preprocessing
+- Exploratory Data Analysis
+- Model Training
+- Model Evaluation
+- Model Deployment using Flask
 
 ---
 
 # 🎯 Objectives
 
-- Predict loan approval using machine learning.
-- Automate the loan eligibility prediction process.
-- Improve decision-making through data-driven analysis.
-- Provide a user-friendly web interface.
-- Deploy the trained model using Flask.
+- Predict loan eligibility using Machine Learning.
+- Reduce manual effort in loan screening.
+- Improve prediction accuracy through data-driven analysis.
+- Provide a simple and responsive web interface.
+- Deploy the trained model for real-time predictions.
 
 ---
 
-# ✨ Features
+# ✨ Key Features
 
-- Loan applicant data preprocessing
+- Loan applicant information processing
 - Missing value handling
 - Categorical feature encoding
 - Exploratory Data Analysis (EDA)
-- Multiple Machine Learning model training
-- Model performance comparison
+- Multiple Machine Learning model comparison
+- Best model selection
 - Real-time loan eligibility prediction
 - Flask-based web application
-- Interactive prediction results
+- Responsive and user-friendly interface
 
 ---
 
 # 🛠 Technology Stack
 
-### Programming Language
+## Programming Language
 - Python
 
-### Machine Learning Libraries
+## Machine Learning Libraries
 - Pandas
 - NumPy
 - Scikit-learn
-- XGBoost
 - Pickle
 
-### Web Technologies
+## Visualization Libraries
+- Matplotlib
+- Seaborn
+
+## Web Technologies
 - Flask
 - HTML5
 - CSS3
 
-### Development Tools
-- Google Colaboratory
+## Development Tools
+- Google Colab
 - Visual Studio Code
 - GitHub
 
@@ -62,20 +72,26 @@ The project covers the complete machine learning workflow, including data prepro
 
 # 🤖 Machine Learning Models
 
-The following models were trained and evaluated:
+The following Machine Learning algorithms were trained and evaluated during model development.
 
 | Model | Accuracy |
-|--------|----------|
+|--------|-----------|
 | Decision Tree | 69.11% |
 | Random Forest | 75.61% |
-| K-Nearest Neighbors | 57.72% |
+| K-Nearest Neighbors (KNN) | 57.72% |
 | XGBoost | 75.61% |
 
-### Selected Model
+## Final Model
 
 **Random Forest Classifier**
 
-The Random Forest model achieved the best overall performance and was selected for deployment. The trained model is saved as **loan_model.pkl**.
+Random Forest was selected as the final deployment model because it provided the best balance of prediction accuracy and generalization performance.
+
+The trained model is stored as:
+
+```
+loan_model.pkl
+```
 
 ---
 
@@ -103,10 +119,10 @@ Model Training
 Model Evaluation
       │
       ▼
-Best Model Selection
+Random Forest Selection
       │
       ▼
-Model Serialization (.pkl)
+Model Serialization (Pickle)
       │
       ▼
 Flask Web Application
@@ -119,24 +135,27 @@ Loan Eligibility Prediction
 
 # 📂 Project Structure
 
-```text
-Smart_Lender/
+```
+Smart_Lender
 │
-├── Dataset/
+├── Dataset
 │   └── loan_prediction.csv
 │
-├── Training/
+├── Training
 │   └── SmartLender_Model_Training.ipynb
 │
-├── Flask/
+├── Flask
 │   ├── app.py
 │   ├── loan_model.pkl
 │   ├── requirements.txt
 │   │
-│   ├── static/
-│   │     └── style.css
+│   ├── static
+│   │     ├── style.css
+│   │     └── images
+│   │          └── loan-illustration.png
 │   │
-│   └── templates/
+│   └── templates
+│         ├── home.html
 │         ├── index.html
 │         └── result.html
 │
@@ -145,33 +164,41 @@ Smart_Lender/
 
 ---
 
-# 🚀 Installation Guide
+# 🚀 Installation
 
-### Clone the Repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/Smart_Lender.git
-```
-
-### Navigate to the Flask Folder
+## Clone Repository
 
 ```bash
-cd Smart_Lender/Flask
+git clone https://github.com/harshzxx/SmartLender-Loan-Prediction.git
 ```
 
-### Install Dependencies
+---
+
+## Navigate to Project Folder
+
+```bash
+cd SmartLender-Loan-Prediction/Flask
+```
+
+---
+
+## Install Required Libraries
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run the Application
+---
+
+## Run Flask Application
 
 ```bash
 python app.py
 ```
 
-### Open the Application
+---
+
+## Open in Browser
 
 ```
 http://127.0.0.1:5000
@@ -181,65 +208,102 @@ http://127.0.0.1:5000
 
 # 📸 Application Screenshots
 
-## Loan Eligibility Prediction Form
+## 🏠 Home Page
 
-*<img width="1297" height="732" alt="Screenshot 2026-07-12 110438" src="https://github.com/user-attachments/assets/cf9023c9-9f7e-4944-beef-3722da81084a" />
-.*
+<img width="1533" height="693" alt="Screenshot 2026-07-13 234720" src="https://github.com/user-attachments/assets/654d676d-e082-47e3-ba47-e01f0d9b8bc2" />
 
----
-
-## Loan Approval Prediction
-
-*<img width="1020" height="447" alt="Screenshot 2026-07-12 103446" src="https://github.com/user-attachments/assets/791cf8c6-9e74-456e-b8bf-d10a018746d3" />)*
 
 ---
 
-## Loan Rejection Prediction
+## 📝 Loan Prediction Form
 
-*<img width="991" height="405" alt="Screenshot 2026-07-12 110600" src="https://github.com/user-attachments/assets/485afa9f-04d1-4d49-a7bf-8b7d3813a1ee" />
-*
+<img width="1536" height="732" alt="Screenshot 2026-07-13 234811" src="https://github.com/user-attachments/assets/101d2621-33e0-4fe3-ab79-d8dee20025cc" />
+
+
+---
+
+## ✅ Loan Approved Result
+
+<img width="1528" height="696" alt="Screenshot 2026-07-13 234633" src="https://github.com/user-attachments/assets/88320cf3-269f-41c9-b000-bd51be99780b" />
+
+
+---
+
+## ❌ Loan Rejected Result
+
+<img width="1527" height="697" alt="Screenshot 2026-07-13 234704" src="https://github.com/user-attachments/assets/2f0d9a1c-9e83-4271-96ae-4b05440db1e3" />
+
 
 ---
 
 # 📋 Functional Modules
 
-- Dataset Import
+- Dataset Loading
 - Data Cleaning
 - Missing Value Handling
 - Feature Encoding
 - Exploratory Data Analysis
 - Model Training
 - Model Evaluation
+- Random Forest Model Selection
 - Loan Eligibility Prediction
 - Flask Application Deployment
 
 ---
 
-# 🔮 Future Enhancements
+# 📈 Future Enhancements
 
 - User Authentication
 - Database Integration
 - Cloud Deployment
-- Explainable AI for Prediction Analysis
-- Loan Application History
-- Responsive Mobile Interface
+- Prediction History
+- Explainable AI (XAI)
+- REST API Support
+- Mobile-Friendly Interface
 
 ---
 
-# 👩‍💻 Developer
+# 👥 Project Team
 
-**Harshitha**
+**Team Leader**
 
-Bachelor of Technology (B.Tech)
+Harshitha Reddy
 
-Electrical and Electronics Engineering (EEE)
+**Team Members**
+
+- Janardhan Kaavali
+- Thommandru Kirananjali
+- Muni Mohan Krishna Krishna Reddy
+- Hepseba Bezawada
+
+---
+
+# 🎓 Academic Information
+
+**Project Title**
+
+Smart Lender – Loan Eligibility Prediction Using Machine Learning
+
+**Department**
+
+Electrical and Electronics Engineering
+
+**College**
 
 Sri Venkateswara College of Engineering
 
-Academic Year: **2026–2027**
+**Academic Year**
+
+2026–2027
 
 ---
 
-# 📜 License
+# 📄 License
 
-This project has been developed for academic and educational purposes only.
+This project has been developed solely for academic and educational purposes. It is intended for learning, demonstration, and research activities.
+
+---
+
+# ⭐ Acknowledgement
+
+We sincerely thank our faculty members and Sri Venkateswara College of Engineering for their continuous guidance and support throughout the development of this project. Their encouragement and valuable suggestions helped us successfully complete the Smart Lender application.
